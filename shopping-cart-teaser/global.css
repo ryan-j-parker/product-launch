@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Kannada&display=swap');
+
+:root {
+  --big-stone: #142633;
+  --pigeon-post: #B2C5DF;
+  --horizon: #647EA9;
+  --ship-cove: #7D99C0;
+}
+
+body {
+  background: var(--pigeon-post);
+  font-family: 'Tiro Kannada', serif;
+  color: var(--horizon);
+}
+
+#hero-image {
+  grid-area: image;
+  object-fit: cover;
+  height: 70vh;
+  width: 100vw;
+}
+
+@media (min-width: 900px) {
+  body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      'header image'
+      'lead image'
+      'signup image';
+    justify-items: stretch;
+    align-items: center;
+  }
+
+  #hero-image {
+    height: 100%;
+    max-width: 100%;
+  }
+}
+
+#header {
+  grid-area: header;
+  padding: 0 60px;
+  color: var(--big-stone);
+  font-family: 'Tiro Kannada', serif;
+  font-size: 3rem;
+  line-height: 1.25;
+}
+
+#lead {
+  grid-area: lead;
+  padding: 0 60px 60px 60px;
+  font-size: 1.35rem;
+  line-height: 1.5;
+}
+
+#signup-form {
+  grid-area: signup;
+  width: 100%;
+  background: var(--big-stone);
+  padding: 30px;
+}
+
+label,
+input,
+button {
+  display: inline-block;
+  width: 100%;
+  max-width: 450px;
+}
+
+label {
+  color: var(--pigeon-post);
+  font-size: 1.3rem;
+  text-align: left;
+  padding-left: 10px;
+}
+
+input {
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+button {
+  background: var(--horizon);
+  color: white;
+  border: 0;
+  padding: 1em;
+  font-family: 'Tiro Kannada', serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  background-color: #9F141B;
+  border-radius: 25px;
+}
+
+button:hover {
+  color: white;
+  background-color: #00000080;
+  transition-duration: 0.4s;
+}
